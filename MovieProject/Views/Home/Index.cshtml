@@ -1,0 +1,30 @@
+﻿@model MovieProject.Models.Movie
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm("FindRelatedMovies", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <br/>
+        <legend>Get Movie Suggestions</legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+            <div style="border: 1px solid red">
+                @ViewBag.Message
+            </div>
+        }
+            <tr>
+                <td>Movie Title</td>
+                <td>@Html.TextBoxFor(m => m.MovieTitle)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Search" />
+                </td>
+            </tr>
+    </fieldset>
+}
+

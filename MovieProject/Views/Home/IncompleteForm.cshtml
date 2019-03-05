@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var data = ViewBag.Message;
+}
+<h1>Please submit an actual movie title</h1>
+<br />
+@Html.ActionLink("Try Again", "Index", "Home")

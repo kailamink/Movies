@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var data = ViewBag.Message;
+}
+<h1>You may also enjoy these titles:</h1>
+<br/>
+@foreach (var i in Model)
+{
+    <h3>Movie Title: @i.MovieTitle </h3>
+}
+
+

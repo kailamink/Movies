@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var data = ViewBag.Message;
+}
+<h1>404 -- Movie Not Found</h1>
+<br />
+@Html.ActionLink("Try Again", "Index", "Home")
